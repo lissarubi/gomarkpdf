@@ -1,16 +1,18 @@
 package main
 
 import (
-  "github.com/gomarkdown/markdown"
-  "github.com/thatisuday/commando"
-  "github.com/gomarkdown/markdown/html"
-  "io"
-  "io/ioutil"
-  "fmt"
-  "os"
-  "strings"
-  "os/exec"
-  "path/filepath"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
+	"os"
+	"os/exec"
+	"path/filepath"
+	"strings"
+
+	"github.com/gomarkdown/markdown"
+	"github.com/gomarkdown/markdown/html"
+	"github.com/thatisuday/commando"
 )
 
 func execute(command string) string {
@@ -46,7 +48,11 @@ func main(){
 
 func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando.FlagValue){
 
-  packageDirectory, _ := filepath.Abs(filepath.Dir(os.Args[0]))
+  userHome, err := os.UserHomeDir()
+  if err != nil{
+    log.Fatal(err)
+  }
+  packageDirectory := userHome + "/go/src/github.com/edersonferreira/gomarkpdf/"
   defaultThemes := []string{"default", "dark", "abnt", "programmer"}
   cmdFlags := ""
   orientations := []string{"portrait", "landscape"}
