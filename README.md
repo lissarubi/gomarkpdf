@@ -4,7 +4,7 @@ Gomarkpdf is a program that transforms a Markdown file to a PDF
 
 > Warning: Images must be inside the current directory, like assets/image.png, please, dont use external image links, download and put inside the current directory.
 
-[Github](https://github.com/edersonferreira/markpdf)
+[Github](https://github.com/edersonferreira/gomarkpdf)
 
 - [Install](#install)
 - [Exemple](#example)
@@ -57,7 +57,7 @@ paru gomarkpdf-edersonferreira-git
 
 ## Exemple
 
-To see this README in a PDF by Gomarkpdf [click here](https://github.com/edersonferreira/markpdf/blob/master/examples/README.pdf)
+To see this README in a PDF by Gomarkpdf [click here](https://github.com/edersonferreira/gomarkpdf/blob/master/examples/README.pdf)
 
 # Usage
 
@@ -105,7 +105,7 @@ or
 
 `gomarkpdf myExemple.md --orientation portrait`
 
-An example of Landscape format applied to Gomarkpdf is [this README in Landscape Format](https://github.com/edersonferreira/markpdf/blob/master/examples/landscape.pdf)
+An example of Landscape format applied to Gomarkpdf is [this README in Landscape Format](https://github.com/edersonferreira/gomarkpdf/blob/master/examples/landscape.pdf)
 
 ## Adding personalizated style with inline CSS in your file
 
