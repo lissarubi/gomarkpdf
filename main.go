@@ -1,17 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"io"
-	"io/ioutil"
-	"log"
-	"os"
-	"os/exec"
-	"strings"
+  "fmt"
+  "io"
+  "io/ioutil"
+  "log"
+  "os"
+  "os/exec"
+  "strings"
 
-	"github.com/gomarkdown/markdown"
-	"github.com/gomarkdown/markdown/html"
-	"github.com/thatisuday/commando"
+  "github.com/gomarkdown/markdown"
+  "github.com/gomarkdown/markdown/html"
+  "github.com/thatisuday/commando"
 )
 
 func execute(command string) string {
@@ -105,17 +105,17 @@ func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando
   }	
 
   flagsHTML := html.CommonFlags | html.CompletePage | html.HrefTargetBlank
-	opts := html.RendererOptions{
-		Flags: flagsHTML,
-	}
-	renderer := html.NewRenderer(opts)
+  opts := html.RendererOptions{
+    Flags: flagsHTML,
+  }
+  renderer := html.NewRenderer(opts)
 
   htmlBody := string(markdown.ToHTML(markdownText, nil, renderer))
   // não mexe
   html := "<!DOCTYPE html>\n<html lang=en>\n<meta charset=UTF-8>\n<meta content=\"width=device-width,initial-scale=1\"name=viewport>\n  <link rel=\"stylesheet\" href=\"" + theme + ".css\">\n" + cssLinks + "<body>\n" + htmlBody + "<script>\"h\"==document.body.innerHTML[144]&&\"1\"==document.body.innerHTML[145]&&(document.body.style.marginTop=\"-10010px\")</script>"
 
   HTMLFile := strings.ReplaceAll(string(markdownFile), "md", "html")
-  
+
   PDFFile := strings.ReplaceAll(string(markdownFile), "md", "pdf")
 
   if path != "default"{
