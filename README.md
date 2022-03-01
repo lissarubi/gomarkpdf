@@ -39,22 +39,6 @@ To install Gomarkpdf use:
 
 `go get -u github.com/edersonferreira/gomarkpdf`
 
-## AUR
-
-Gomarkpdf can be installed using AUR, with the package `gomarkpdf-edersonferreira-git`, like:
-
-### Yay
-
-```
-yay -S gomarkpdf-edersonferreira-git
-```
-
-### Paru
-
-```
-paru gomarkpdf-edersonferreira-git
-```
-
 ## Exemple
 
 To see this README in a PDF by Gomarkpdf [click here](https://github.com/edersonferreira/gomarkpdf/blob/master/examples/README.pdf)
