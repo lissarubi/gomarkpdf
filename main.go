@@ -97,7 +97,6 @@ func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando
 
 	}
 
-	fmt.Println("Reading File")
 	markdownText, err := os.ReadFile(markdownFile)
 	if err != nil {
 		fmt.Println("File reading error", err)
@@ -122,18 +121,14 @@ func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando
 		PDFFile = path
 	}
 
-	fmt.Println("Writing HTML file:" + html)
 	WriteToFile(HTMLFile, html)
 
 	generatePDF(HTMLFile, PDFFile, cmdFlags)
 }
 
 func generatePDF(file string, PDFFile string, cmdFlags string) {
-	fmt.Println("Running wkhtmltopdf")
-	fmt.Println(cmdFlags)
 	execute("wkhtmltopdf -L 0 -R 0 -B 0 -T 0 " + cmdFlags + "--enable-local-file-access " + file + " " + PDFFile)
-	fmt.Println("result")
-	// os.Remove(file)
+	os.Remove(file)
 	fmt.Println("Done")
 }
 
