@@ -37,9 +37,13 @@ Install Golang with your package manager, and install Gomarkpdf
 
 To install Gomarkpdf use:
 
-`go get -u github.com/edersonferreira/gomarkpdf`
+`go install -u github.com/edersonferreira/gomarkpdf@latest`
 
-## Exemple
+You'll also need wkhtmltopdf:
+
+`brew install wkhtmltopdf`
+
+## Example
 
 To see this README in a PDF by Gomarkpdf [click here](https://github.com/edersonferreira/gomarkpdf/blob/master/examples/README.pdf)
 
