@@ -7,7 +7,7 @@ Gomarkpdf is a program that transforms a Markdown file to a PDF
 [Github](https://github.com/edersonferreira/gomarkpdf)
 
 - [Install](#install)
-- [Exemple](#example)
+- [Example](#example)
 - [Usage](#usage)
 - [Using Themes](#using-themes)
 - [specificalling PDF size (like A4, A5,etc)](#specificalling-pdf-size)
