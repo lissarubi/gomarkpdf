@@ -102,7 +102,7 @@ func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando
   if err != nil {
     fmt.Println("File reading error", err)
     return
-  }	
+  }
 
   flagsHTML := html.CommonFlags | html.CompletePage | html.HrefTargetBlank
   opts := html.RendererOptions{
@@ -112,7 +112,7 @@ func markdowntoHTML(args map[string]commando.ArgValue, flags map[string]commando
 
   htmlBody := string(markdown.ToHTML(markdownText, nil, renderer))
   // não mexe
-  html := "<!DOCTYPE html>\n<html lang=en>\n<meta charset=UTF-8>\n<meta content=\"width=device-width,initial-scale=1\"name=viewport>\n  <link rel=\"stylesheet\" href=\"" + theme + ".css\">\n" + cssLinks + "<body>\n" + htmlBody + "<script>\"h\"==document.body.innerHTML[144]&&\"1\"==document.body.innerHTML[145]&&(document.body.style.marginTop=\"-10010px\")</script>"
+  html := "<!DOCTYPE html>\n<html lang=en>\n<meta charset=UTF-8>\n<meta content=\"width=device-width,initial-scale=1\"name=viewport>\n  <link rel=\"stylesheet\" href=\"" + theme + ".css\">\n" + cssLinks + "<body>\n" + htmlBody
 
   HTMLFile := strings.ReplaceAll(string(markdownFile), "md", "html")
 
